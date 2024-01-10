@@ -3,6 +3,7 @@ use core::{self, f64::consts::SQRT_2};
 
 use super::{color_gradient::*, noise_image::*, noise_map::*};
 
+#[derive(Clone, Debug)]
 pub struct ImageRenderer {
     // The color gradient used to specify the image colors.
     gradient: ColorGradient,
@@ -356,7 +357,7 @@ impl Default for ImageRenderer {
     }
 }
 
-#[derive(Copy, Clone, Default)]
+#[derive(Copy, Clone, Default, Debug)]
 pub struct LightSource {
     // Azimuth of the light source, in degrees.
     azimuth: f64,

@@ -1,5 +1,6 @@
 use crate::{math::interpolate, noise_fns::NoiseFn, utils::noise_map::NoiseMap};
 
+#[derive(Copy, Clone, Debug)]
 pub struct NoiseFnWrapper<SourceFn, const DIM: usize>
 where
     SourceFn: Fn([f64; DIM]) -> f64,
